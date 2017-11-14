@@ -1,20 +1,35 @@
-import unittest
-import test
-from sut import *
+import math
+from unittest.mock import MagicMock
 
-class TestSut(unittest.TestCase):
+def area(ancho, alto):
+    return ancho * alto
 
-    def test_area(self):
-        calculararea=area(20, 2)
-        self.assertTrue(calculararea == 40)
+def saludar(nombre):
+    return "Hola " + nombre
+    
+def sumar(a, b):
+    return a + b
+    
+def comparar(a, b):
+    if a < b:
+        return "A menor que B"
+    if a > b:
+        return "A mayor que B"
+    if a == b:
+        return "A y B son iguales"
+   
+def valorabsoluto(n):
+    if n < 0:
+        n = -n
+    return n
+    
+def costototal(a, b):
+    total = sumar(a, b)
+    return "El costo total es $" + str(total)
 
-    def test_saludar(self):
-        saludo = saludar('Damian')
-        self.assertTrue(saludo == "Hola Damian")
 
-    def test_sumar(self):
-        calcularsuma = sumar(15, 15)
-        self.assertTrue(calcularsuma == 30)
-
-if __name__ == '__main__':
-    unittest.main()
+def supercalc(num):
+    exp = math.exp(num)
+    sum = exp + 2
+    sqrt = math.sqrt(sum)
+    return sqrt
