@@ -5,31 +5,44 @@ from sut import *
 
 class Test(unittest.TestCase):
 
-    def testarea(self):
+    def test_tarea(self):
         self.assertEqual(area(2, 3),6)
 
-    def testsaludar(self):
+    def test_saludar(self):
         self.assertEqual(saludar("damian"),"Hola damian")
 
-    def testsumar(self):
+    def test_sumar(self):
         self.assertEqual(sumar(30, 10),40)
 
+   
+	
+		
+	
+    def testcomparar2(self):
+	
+	
+	
+        self.assertEqual(comparar(2,1),"A mayor que B")
+	
+	
     def testcomparar(self):
         self.assertEqual(comparar(1,2),"A menor que B")
-    def testcomparar2(self):
-        self.assertEqual(comparar(2,1),"A mayor que B")
+	
     def testcomparar3(self):
+	
         self.assertEqual(comparar(2,2),"A y B son iguales")
 
 
 	
-    def testvalorabsoluto(self):
+    def testvalorabs(self):
         self.assertEqual(valorabsoluto(-50),50)
         
-    def testvalorabsoluto2(self):
+    def testvalorabs2(self):
         self.assertEqual(valorabsoluto(40),40)
+	
+	
         
-    def testcostototal(self):
+    def testtotal(self):
         self.assertEqual(costototal(2, 2),"El costo total es $4")
 
     
